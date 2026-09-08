@@ -76,7 +76,7 @@ const Home = () => {
               alt="Tea gardens"
             />
             <div className="relative z-10 text-center">
-              <img src={Logo} className="w-72" alt="" />
+              <img src={Logo} className="lg:w-72 w-52" alt="" />
               {/* <Leaf
                 className="mx-auto mb-4 h-16 w-16 text-[#d9b45b]"
                 strokeWidth={1}

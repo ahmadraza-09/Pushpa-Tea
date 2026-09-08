@@ -20,6 +20,8 @@ import {
   socialLinks,
 } from '../data';
 
+import Logo from '../assets/logo.png'
+
 const socialIconMap = {
   instagram: FaInstagram,
   facebook: FaFacebookF,
@@ -35,12 +37,14 @@ const Footer = () => (
       {/* Brand */}
       <div>
         <div className="flex items-center gap-2 text-[#f3d98f]">
-          <Leaf size={28} />
+          {/* <Leaf size={28} />
 
           <span className="font-serif text-2xl font-bold">
             Pushpa
             <span className="text-[#c47a2b]">.</span>
-          </span>
+          </span> */}
+
+          <img src={Logo} alt="" className='w-20 h-auto'/>
         </div>
 
         <p className="mt-4 max-w-xs text-sm leading-6 text-[#9aab97]">
