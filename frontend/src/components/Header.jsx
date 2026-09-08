@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Menu, Search, ShoppingBag, X } from 'lucide-react';
 import { navLinks, products, siteConfig } from '../data';
 import { useCart } from '../context/CartContext';
+import Logo from '../assets/logo.png';
 
 const Header = () => {
   const { count } = useCart();
@@ -22,8 +23,9 @@ const Header = () => {
         {siteConfig.announcement}<span className="mx-2 text-[#c98d2b]">•</span>{siteConfig.announcementExtra}
       </div>
       <header className="sticky top-0 z-40 border-b border-[#e8dfc8] bg-[#faf8f1]/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10">
-          <Link to="/" className="font-serif text-[23px] font-bold">Pushpa<span className="text-[#b66c20]">.</span></Link>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10 lg:py-1">
+          {/* <Link to="/" className="font-serif text-[23px] font-bold">Pushpa<span className="text-[#b66c20]">.</span></Link> */}
+          <Link to="/" className="font-serif text-[23px] font-bold"><img src={Logo} alt="" className="w-20 h-auto"/></Link>
           <nav className="hidden items-center gap-6 text-sm font-semibold text-[#41604b] lg:flex">
             {navLinks.map((link) => <Link key={link.to} to={link.to} className="hover:text-[#b66c20]">{link.label}</Link>)}
           </nav>

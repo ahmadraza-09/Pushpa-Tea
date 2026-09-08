@@ -21,6 +21,8 @@ import {
 import ArticleCard from "../components/ArticleCard";
 import ProductCard from "../components/ProductCard";
 
+import Logo from '../assets/logo.png'
+
 
 const Home = () => {
   return (
@@ -74,16 +76,17 @@ const Home = () => {
               alt="Tea gardens"
             />
             <div className="relative z-10 text-center">
-              <Leaf
+              <img src={Logo} className="w-72" alt="" />
+              {/* <Leaf
                 className="mx-auto mb-4 h-16 w-16 text-[#d9b45b]"
                 strokeWidth={1}
-              />
-              <p className="font-serif text-5xl font-bold leading-none text-[#f6e8bc]">
+              /> */}
+              {/* <p className="font-serif text-5xl font-bold leading-none text-[#f6e8bc]">
                 Pushpa
               </p>
               <p className="mt-2 font-serif text-lg italic text-[#d9b45b]">
                 Tea Co.
-              </p>
+              </p> */}
               <div className="mx-auto mt-5 h-px w-16 bg-[#d9b45b]/50" />
               <p className="mt-3 text-[10px] font-bold uppercase tracking-[.25em] text-[#b8c6a4]">
                 Since {siteConfig.foundedYear} · India
