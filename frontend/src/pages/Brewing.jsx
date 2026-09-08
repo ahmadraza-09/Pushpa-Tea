@@ -1,0 +1,5 @@
+import { Leaf, Thermometer, Timer } from 'lucide-react';
+import { brewGuides } from '../data';
+import Page from '../components/Page';
+const Brewing=()=> <Page title="Brewing guides" eyebrow="Brew it right" intro="A perfect cup is only a few steps away. Find the right temperature, time and ratio for every type of tea we make."><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{brewGuides.map((guide)=><div key={guide.id} className="rounded-2xl border border-[#e2d8c0] bg-[#f3eddb] p-6"><h3 className="font-serif text-2xl font-bold">{guide.name}</h3><p className="mt-1 text-xs text-[#8a9a87]">{guide.tea}</p><div className="mt-5 space-y-2 text-sm text-[#607161]"><div className="flex items-center gap-2"><Thermometer size={16} className="text-[#bb7929]"/>{guide.temp}</div><div className="flex items-center gap-2"><Timer size={16} className="text-[#bb7929]"/>{guide.time}</div><div className="flex items-center gap-2"><Leaf size={16} className="text-[#bb7929]"/>{guide.ratio}</div></div><div className="mt-5 rounded-xl bg-[#faf8f1] p-4 text-xs leading-5 text-[#7a8a77]">{guide.tips}</div></div>)}</div></Page>;
+export default Brewing;

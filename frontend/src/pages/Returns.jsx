@@ -1,0 +1,2 @@
+import { returnPolicies } from '../data'; import Page from '../components/Page';
+const Returns=()=> <Page title="Returns & refunds" eyebrow="Our promise" intro="We want you to love every cup. Here's our straightforward returns policy."><div className="mx-auto max-w-3xl space-y-6">{returnPolicies.map((policy)=><div key={policy.title} className="rounded-2xl border border-[#e2d8c0] bg-[#faf8f1] p-6"><h3 className="font-serif text-xl font-bold">{policy.title}</h3><p className="mt-3 text-sm leading-7 text-[#5c6c5e]">{policy.text}</p></div>)}</div></Page>; export default Returns;

@@ -1,0 +1,4 @@
+import { teaOrigins } from '../data';
+import Page from '../components/Page';
+const Origins=()=> <Page title="Tea origins" eyebrow="From our gardens" intro="Every tea has a place. Explore the Indian regions that give Pushpa teas their character."><div className="grid gap-8 lg:grid-cols-2">{teaOrigins.map((origin)=><div key={origin.name} className="overflow-hidden rounded-[24px] border border-[#e2d8c0]"><img src={origin.image} alt={origin.name} className="h-56 w-full object-cover"/><div className="bg-[#faf8f1] p-6"><h3 className="font-serif text-3xl font-bold">{origin.name}</h3><p className="mt-1 text-xs font-semibold uppercase tracking-wider text-[#b66c20]">{origin.region}</p><p className="mt-4 text-sm leading-7 text-[#5c6c5e]">{origin.description}</p></div></div>)}</div></Page>;
+export default Origins;

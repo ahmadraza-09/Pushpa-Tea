@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom'; import Page from '../components/Page';
+const NotFound=()=> <Page title="This page has wandered off" eyebrow="404" intro="Let's get you back to something warm."><Link to="/" className="inline-flex rounded-full bg-[#183d2c] px-6 py-3 text-sm font-bold text-white">Back home</Link></Page>; export default NotFound;

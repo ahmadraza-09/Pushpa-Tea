@@ -1,0 +1,6 @@
+import { useState } from 'react';
+import { products } from '../data';
+import Page from '../components/Page';
+import ProductCard from '../components/ProductCard';
+const Shop=()=>{const[filter,setFilter]=useState('All teas');const filters=['All teas','Black tea','Green tea','Herbal','Premium'];const visible=filter==='All teas'?products:products.filter((p)=>filter==='Black tea'?['gold','masala','earl-grey'].includes(p.id):filter==='Green tea'?p.id==='green':filter==='Herbal'?p.id==='tulsi':filter==='Premium'?['darjeeling','oolong','white'].includes(p.id):true);return <Page title="Shop tea" eyebrow="Find your everyday ritual" intro="From a strong morning cup to a delicate afternoon pour, find a blend with a little India in it."><div className="mb-8 flex gap-2 overflow-x-auto pb-2">{filters.map((item)=><button key={item} onClick={()=>setFilter(item)} className={`whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-bold ${filter===item?'bg-[#183d2c] text-white':'border border-[#d9ceb3] text-[#657565]'}`}>{item}</button>)}</div><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{visible.map((product)=><ProductCard key={product.id} product={product}/>)}</div></Page>};
+export default Shop;
